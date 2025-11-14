@@ -2,8 +2,9 @@ package com.sb.jini;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
+import org.jetbrains.annotations.NotNull;
 
-public class JiniPlugin implements Plugin<Project> {
+public class JiniPlugin implements Plugin<@NotNull Project> {
     @Override
     public void apply(Project project) {
         project.getExtensions().create("jini", JiniExtension.class, project);
